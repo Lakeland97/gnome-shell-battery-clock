@@ -20,9 +20,6 @@ var Indicator = GObject.registerClass(
          seconds = this._proxy.TimeToFull;
       } else if (this._proxy.State === UPower.DeviceState.DISCHARGING) {
          seconds = this._proxy.TimeToEmpty;
-      } else {
-         // state is one of PENDING_CHARGING, PENDING_DISCHARGING
-         return _("… (%s)").format(percentage);
       }
 
       let time = Math.round(seconds / 60);
