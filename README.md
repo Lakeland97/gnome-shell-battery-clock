@@ -1,8 +1,10 @@
 # A fork of Battery Time (Percentage) Compact
 
-A GNOME shell extension modified for my own needs, to show the time your battery will be flat/charged rather than displaying the amount of time remaining.
+A GNOME shell extension modified for my own needs, to show the time your battery will be flat/charged rather than displaying the amount of time remaining. Inspired by Pixel Launcher
 
-Battery remaining: 
+Battery remaining:
+
+![Remaining](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-time-percentage-compact/master/indicator.png)
 
 https://extensions.gnome.org/extension/
 
