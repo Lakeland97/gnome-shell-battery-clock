@@ -39,7 +39,7 @@ var Indicator = GObject.registerClass(
       let ampm = (hrs % 12 == hrs && "AM" || "PM");
 
       // Translators: this is <hours>:<minutes>
-      return _('%d\u2236%02d%s (%s)').format(hrs % 12, mins, ampm, percentage);
+      return _('%d\u2236%02d %s (%s)').format(hrs % 12, mins, ampm, percentage);
    }
 
    _sync() {
