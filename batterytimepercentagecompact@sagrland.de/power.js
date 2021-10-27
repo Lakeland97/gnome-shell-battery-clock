@@ -8,6 +8,12 @@ var Indicator = GObject.registerClass(
    _getTime() {
       let seconds = 0;
 
+      // This returns fractional outputs on dual battery laptops, rounding is a quick solution
+      const percentage = Math.round(this._proxy.Percentage) + '%'
+
+      // Ensure percentage label is enabled regardless of gsettings
+      this._percentageLabel.visible = true
+
       if (this._proxy.State === UPower.DeviceState.FULLY_CHARGED) {
          return '';
       } else if (this._proxy.State === UPower.DeviceState.CHARGING) {
@@ -16,14 +22,14 @@ var Indicator = GObject.registerClass(
          seconds = this._proxy.TimeToEmpty;
       } else {
          // state is one of PENDING_CHARGING, PENDING_DISCHARGING
-         return _('Estimating…');
+         return _("… (%s)").format(percentage);
       }
 
       let time = Math.round(seconds / 60);
       if (time === 0) {
          // 0 is reported when UPower does not have enough data
          // to estimate battery life
-         return _('Estimating…');
+         return _("… (%s)").format(percentage);
       }
 
       // let minutes = time % 60;
@@ -36,7 +42,7 @@ var Indicator = GObject.registerClass(
       let ampm = (hrs % 12 == hrs && "AM" || "PM");
 
       // Translators: this is <hours>:<minutes>
-      return _('%d\u2236%02d%s').format(hrs % 12, mins, ampm);
+      return _('%d\u2236%02d%s (%s)').format(hrs % 12, mins, ampm, percentage);
    }
 
    _sync() {
