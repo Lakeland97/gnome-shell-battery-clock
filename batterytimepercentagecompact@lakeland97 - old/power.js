@@ -9,10 +9,10 @@ var Indicator = GObject.registerClass(
       let seconds = 0;
 
       // This returns fractional outputs on dual battery laptops, rounding is a quick solution
-      const percentage = Math.round(this._proxy.Percentage) + '%';
+      const percentage = Math.round(this._proxy.Percentage) + '%'
 
       // Ensure percentage label is enabled regardless of gsettings
-      this._percentageLabel.visible = true;
+      this._percentageLabel.visible = true
 
       if (this._proxy.State === UPower.DeviceState.FULLY_CHARGED) {
          return '';
@@ -29,20 +29,17 @@ var Indicator = GObject.registerClass(
          return _("… (%s)").format(percentage);
       }
 
-      let curTime = new Date();
-      let emptyTime = new Date(curTime.getTime() + (seconds*1000));
+      // let minutes = time % 60;
+      // let hours = Math.floor(time / 60);
 
-      let emptyHours = emptyTime.getHours();
-      let emptyMins = emptyTime.getMinutes();
+      let emptytime = new Date(new Date().getTime() + (seconds*1000));
+
+      let hrs = emptytime.getHours();
+      let mins = emptytime.getMinutes();
+      let ampm = (hrs % 12 == hrs && "AM" || "PM");
 
       // Translators: this is <hours>:<minutes>
-      let output = _('%d\u2236%02d %s (%s)').format(emptyHours % 12, emptyMins, (emptyHours % 12 == emptyHours && "AM" || "PM"), percentage);
-
-      // Clean-up objects to prevent a memory leak
-      curTime.destroy(); curTime = null;
-      emptyTime.destroy(); emptyTime = null;
-
-      return output;
+      return _('%d\u2236%02d %s (%s)').format(hrs % 12, mins, ampm, percentage);
    }
 
    _sync() {
