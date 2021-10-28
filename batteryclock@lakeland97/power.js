@@ -29,6 +29,7 @@ var Indicator = GObject.registerClass(
             // to estimate battery life
             return _("… (%s)").format(percentage);
          }
+         let output = '';
 
          let curTime = new Date();
          let emptyTime = new Date(curTime.getTime() + (seconds*1000));
@@ -36,12 +37,15 @@ var Indicator = GObject.registerClass(
          let emptyHours = emptyTime.getHours();
          let emptyMins = emptyTime.getMinutes();
 
-         // Translators: this is <hours>:<minutes>
-         let output = _('%d\u2236%02d %s (%s)').format(emptyHours % 12, emptyMins, (emptyHours % 12 == emptyHours && "AM" || "PM"), percentage);
-
+         if(time >= 3600) {
+            // Translators: this is <hours>:<minutes>
+            output = _('%d\u2236%02d %s (%s)').format(emptyHours % 12, emptyMins, (emptyHours % 12 == emptyHours && "AM" || "PM"), percentage);
+         } else {
+            output = _('%d mins (%s)').format(time, percentage);
+         }
          // Clean-up objects to prevent a memory leak, don't know if this is required or not
-         curTime = null;
-         emptyTime = null;
+         // curTime = null;
+         // emptyTime = null;
 
          return output;
       } catch (e) {
