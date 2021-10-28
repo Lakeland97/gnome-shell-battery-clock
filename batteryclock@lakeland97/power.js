@@ -31,13 +31,12 @@ var Indicator = GObject.registerClass(
          }
          let output = '';
 
-         let curTime = new Date();
-         let emptyTime = new Date(curTime.getTime() + (seconds*1000));
-
-         let emptyHours = emptyTime.getHours();
-         let emptyMins = emptyTime.getMinutes();
-
          if(time >= 60) {
+            let curTime = new Date();
+            let emptyTime = new Date(curTime.getTime() + (seconds*1000));
+   
+            let emptyHours = emptyTime.getHours();
+            let emptyMins = emptyTime.getMinutes();
             // Translators: this is <hours>:<minutes>
             output = _('%d\u2236%02d %s (%s)').format(emptyHours % 12, emptyMins, (emptyHours % 12 == emptyHours && "AM" || "PM"), percentage);
          } else {
