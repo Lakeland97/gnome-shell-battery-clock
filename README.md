@@ -15,7 +15,7 @@ Charge/discharge completion time (with under an hour remaining): <img src="https
 Battery fully charged: <img src="https://raw.githubusercontent.com/SaGrLand/gnome-shell-battery-time-and-percentage/master/battery_full.png">
 
 Battery time estimating: <img src="https://raw.githubusercontent.com/SaGrLand/gnome-shell-battery-time-percentage-compact/master/battery_estimating-time.png">
-
+ 
 https://extensions.gnome.org/extension/
 
 This is a fork of https://github.com/SaGrLand/gnome-shell-battery-time-percentage-compact
