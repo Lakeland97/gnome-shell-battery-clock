@@ -43,6 +43,7 @@ var Indicator = GObject.registerClass(
             getBattery((proxy, icon) => {
                icon.hide()
              })
+             return '';
          } else {
             getBattery((proxy, icon) => {
                icon.show()
@@ -50,7 +51,7 @@ var Indicator = GObject.registerClass(
          }
 
          if (this._proxy.State === UPower.DeviceState.FULLY_CHARGED || percentage >= threshold) {
-            return '';
+            return '\u221E';
          } else if (this._proxy.State === UPower.DeviceState.CHARGING) {
             seconds = this._proxy.TimeToFull * (threshold/100);
          } else if (this._proxy.State === UPower.DeviceState.DISCHARGING) {

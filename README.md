@@ -2,13 +2,13 @@
 
 A GNOME shell extension modified for my own needs, to show the time your battery will be flat/charged rather than displaying the amount of time remaining. Inspired by Pixel Launcher
 
-Charge/discharge completion time:
+Charge/discharge completion time: <img src="https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-clock/master/indicator.png">
 
-![Remaining](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-clock/master/indicator.png)
+Charge/discharge completion time (with under an hour remaining): <img src="https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-clock/master/under60mins.png">
 
-Charge/discharge completion time (with under an hour remaining):
+Battery fully charged: <img src="https://raw.githubusercontent.com/SaGrLand/gnome-shell-battery-time-and-percentage/master/battery_full.png">
 
-![Remaining2](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-clock/master/under60mins.png)
+Battery time estimating: <img src="https://raw.githubusercontent.com/SaGrLand/gnome-shell-battery-time-percentage-compact/master/battery_estimating-time.png">
 
 https://extensions.gnome.org/extension/
 
