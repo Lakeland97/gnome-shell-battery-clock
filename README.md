@@ -1,6 +1,12 @@
 # GNOME Battery Clock
 
-A GNOME shell extension modified for my own needs, to show the time your battery will be flat/charged rather than displaying the amount of time remaining. Inspired by Pixel Launcher
+A GNOME shell extension to show the time your battery will be flat/charged on the taskbar. Inspired by Pixel Launcher.
+
+WIP Features:
+
+Charge threshold
+
+Battery icon autohide based on threshold
 
 Charge/discharge completion time: <img src="https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-clock/master/indicator.png">
 
@@ -13,3 +19,5 @@ Battery time estimating: <img src="https://raw.githubusercontent.com/SaGrLand/gn
 https://extensions.gnome.org/extension/
 
 This is a fork of https://github.com/SaGrLand/gnome-shell-battery-time-percentage-compact
+
+With battery icon autohide from https://github.com/ai/autohide-battery
