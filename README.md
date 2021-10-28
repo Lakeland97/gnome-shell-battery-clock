@@ -2,7 +2,7 @@
 
 A GNOME shell extension modified for my own needs, to show the time your battery will be flat/charged rather than displaying the amount of time remaining. Inspired by Pixel Launcher
 
-Battery remaining:
+Charge/discharge completion time:
 
 ![Remaining](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-time-percentage-compact/master/indicator.png)
 
