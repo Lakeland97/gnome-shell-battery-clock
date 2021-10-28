@@ -37,8 +37,11 @@ var Indicator = GObject.registerClass(
    
             let emptyHours = emptyTime.getHours();
             let emptyMins = emptyTime.getMinutes();
+
+            let timeDisplay = emptyHours % 12 == 0 && 12 || emptyHours % 12;
+            let amBool = (emptyHours % 12 == emptyHours || emptyHours / 12 == 2);
             // Translators: this is <hours>:<minutes>
-            output = _('%d\u2236%02d %s (%s)').format(emptyHours % 12, emptyMins, (emptyHours % 12 == emptyHours && "AM" || "PM"), percentage);
+            output = _('%d\u2236%02d %s (%s)').format(timeDisplay, emptyMins, (amBool && "AM" || "PM"), percentage);
          } else {
             output = _('%d mins (%s)').format(time, percentage);
          }
