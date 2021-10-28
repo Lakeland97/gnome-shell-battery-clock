@@ -4,11 +4,11 @@ A GNOME shell extension modified for my own needs, to show the time your battery
 
 Charge/discharge completion time:
 
-![Remaining](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-time-percentage-compact/master/indicator.png)
+![Remaining](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-clock/master/indicator.png)
 
 Charge/discharge completion time (with under an hour remaining):
 
-![Remaining2](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-time-percentage-compact/master/under60mins.png)
+![Remaining2](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-clock/master/under60mins.png)
 
 https://extensions.gnome.org/extension/
 
