@@ -1,6 +1,6 @@
 # GNOME Battery Clock
 
-A GNOME shell extension modified to show the time your battery will be flat/charged rather than displaying the amount of time remaining. Inspired by Pixel Launcher.
+A GNOME shell extension that shows the time your battery will be flat/charged on the taskbar. Inspired by Pixel Launcher.
 
 WIP Features:
 
