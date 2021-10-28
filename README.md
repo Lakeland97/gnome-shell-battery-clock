@@ -8,4 +8,4 @@ Battery remaining:
 
 https://extensions.gnome.org/extension/
 
-This is a fork of https://github.com/SaGrLand/gnome-shell-battery-time-percentage-compact which is a fork of https://github.com/luispabon/gnome-shell-battery-time-and-percentage.
+This is a fork of https://github.com/SaGrLand/gnome-shell-battery-time-percentage-compact
