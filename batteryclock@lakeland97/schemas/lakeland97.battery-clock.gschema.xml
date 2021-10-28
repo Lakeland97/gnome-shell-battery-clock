@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="lakeland97.battery-clock" path="/lakeland97/battery-clock/">
+    <key name="hide-on" type="i">
+      <summary>Target battery level for estimate</summary>
+      <default>100</default>
+    </key>
+  </schema>
+</schemalist>
