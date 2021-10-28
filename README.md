@@ -8,7 +8,7 @@ Charge/discharge completion time:
 
 Charge/discharge completion time (with under an hour remaining):
 
-![Remaining](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-time-percentage-compact/master/under60mins.png)
+![Remaining2](https://raw.githubusercontent.com/Lakeland97/gnome-shell-battery-time-percentage-compact/master/under60mins.png)
 
 https://extensions.gnome.org/extension/
 
