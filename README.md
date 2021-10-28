@@ -13,4 +13,5 @@ Charge/discharge completion time (with under an hour remaining):
 https://extensions.gnome.org/extension/
 
 This is a fork of https://github.com/SaGrLand/gnome-shell-battery-time-percentage-compact
+
 With battery icon autohide from https://github.com/ai/autohide-battery
