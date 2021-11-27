@@ -79,7 +79,7 @@ var Indicator = GObject.registerClass(
             // Translators: this is <hours>:<minutes> AM/PM (Battery%)
             output = _('%d\u2236%02d %s (%s%%)').format(timeDisplay, emptyMins, (amBool && "AM" || "PM"), percentage);
          } else {
-            output = _('%d mins (%s%%)').format(time, percentage);
+            output = _('%d mins (%s%%)').format(time, percentage); // Someone add a check for if battery has more than 24 hours remaining, (X day(s), X hour(s) (X%))
          }
          // Clean-up objects to prevent a memory leak, don't know if this is required or not
          // curTime = null;
