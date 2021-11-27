@@ -79,7 +79,19 @@ var Indicator = GObject.registerClass(
             // Translators: this is <hours>:<minutes> AM/PM (Battery%)
             output = _('%d\u2236%02d %s (%s%%)').format(timeDisplay, emptyMins, (amBool && "AM" || "PM"), percentage);
          } else {
-            output = _('%d mins (%s%%)').format(time, percentage); // Someone add a check for if battery has more than 24 hours remaining, (X day(s), X hour(s) (X%))
+            if(time > 60*24){
+               let days = int(time/(60*24)); // calculate number of days remaining on battery
+               output = _("%d day" + (days > 1 && "s" || "")).format(days);
+               let remaining = time-(days*(60*24)); // calculate remaining minutes, subtracting days
+               if(remaining >= 60)
+               {
+                  let hours = int(remaining)/60; // calculate remaining hours from minutes
+                  output = output + " " + _("%d hr" + (hours > 1 && "s" || "")).format(hours);
+               }
+               output = output + " " + _('(%s%%)').format(percentage);
+            } else {
+               output = _('%d mins (%s%%)').format(time, percentage); 
+            }
          }
          // Clean-up objects to prevent a memory leak, don't know if this is required or not
          // curTime = null;
